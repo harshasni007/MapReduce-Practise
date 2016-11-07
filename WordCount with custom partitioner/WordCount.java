@@ -37,14 +37,14 @@ public class WordCount {
 			while (itr.hasMoreTokens()) {
 				String localWord = itr.nextToken();
 				int count;
-				if(localWord.toLowerCase().matches("^[mnopq].*")){
+				//if(localWord.toLowerCase().matches("^[mnopq].*")){
 					//minVal = (a < b) ? a : b;
 					count = (wordMap.get(localWord)==null) ? 1: (wordMap.get(localWord)+1);
 					
 					wordMap.put(localWord, count);
 					
 					
-				}
+				//}
 			}
 		}
 		
@@ -77,7 +77,7 @@ public class WordCount {
 		}
 	}
 	
-	//Partitioner class
+	//Custom Partitioner class
 	
 	   public static class wordPartitioner extends Partitioner < Text, IntWritable >
 	   {
